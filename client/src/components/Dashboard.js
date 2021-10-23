@@ -1,10 +1,18 @@
 import React from 'react';
-import Nav from './Nav';
+import NavBar from './NavBar';
+import ProfileCard from './ProfileCard';
 
 function Dashboard(props) {
     return (
         <div>
-            <Nav/>
+            <NavBar/>
+            <div className="d-flex flex-wrap" style={{padding: "40px 80px"}}>
+                <ProfileCard/>
+                <ProfileCard/>
+                <ProfileCard/>
+                <ProfileCard/>
+                <ProfileCard/>
+            </div>
             
         </div>
     );
