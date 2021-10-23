@@ -63,7 +63,7 @@ const profiles = [
       "interests": {
           "mbti": "INTP",
           "hogwarts": "Hufflepuff",
-          "astrology": "Taurus",
+          "astrology": "Saggitarius",
           "music": "Rap",
           "berkeley_restaurant": "Gypsy's"
       },
@@ -72,7 +72,57 @@ const profiles = [
         "looking_for": "Study buddy",
         "interested_in": "Women"
       }
-  }
+  },
+
+  {
+    "name": "John Denero",
+    "data": {
+        "emoji": "👨🏻‍💼",
+        "email": "denero@berkeley.edu",
+        "phone": "123-456-7890",
+        "year": 2025,
+        "major": "Media Studies",
+        "bio": "Announcements!!!"
+    },
+
+    "interests": {
+        "mbti": "ENFP",
+        "hogwarts": "Hufflepuff",
+        "astrology": "Taurus",
+        "music": "K-Pop",
+        "berkeley_restaurant": "Yali's Cafe"
+    },
+
+    "preferences": {
+      "looking_for": "Friends",
+      "interested_in": "Everyone"
+    }
+},
+
+{
+    "name": "Josh Hug",
+    "data": {
+        "emoji": "🧝🏻",
+        "email": "lotsofhugs@berkeley.edu",
+        "phone": "123-456-7890",
+        "year": 2023,
+        "major": "Theater",
+        "bio": "5'9 if it matters"
+    },
+
+    "interests": {
+        "mbti": "ESFJ",
+        "hogwarts": "Hufflepuff",
+        "astrology": "Taurus",
+        "music": "Indie Pop",
+        "berkeley_restaurant": "Imm Thai"
+    },
+
+    "preferences": {
+      "looking_for": "Relationship",
+      "interested_in": "Women"
+    }
+}
 ]
 
 export default profiles
