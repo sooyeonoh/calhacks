@@ -11,7 +11,7 @@ function NavBar(props) {
             <div className="d-flex flex-row align-items-center">
                 <NavLink className="ps-4 navlink" to="/">Home</NavLink>
                 <NavLink className="ps-4 navlink" to="/">Matches</NavLink>
-                <NavLink className="ps-4 navlink" to="/">Profile</NavLink>
+                <NavLink className="ps-4 navlink" to="./ProfileCreator">Profile</NavLink>
             </div>
         </div>
     );
