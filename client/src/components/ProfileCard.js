@@ -6,14 +6,11 @@ function ProfileCard(props) {
     return (
         <Card style={{ width: '20rem', height: '500px', margin: "10px"}}>
             <Card.Body>
-                <h1>👼</h1>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
-                </Card.Text>
-                <InfoTag type="primary" info="Aries"/>
-                <InfoTag type="secondary" info="2023"/>
+                <h1 style={{fontSize: '70px'}}>{props.data.emoji}</h1>
+                <Card.Title style={{fontSize: '28px'}}>{props.name}</Card.Title>
+                <Card.Text className="fst-italic">{props.data.bio}</Card.Text>
+                <InfoTag type="primary" info={props.data.year}/>
+                <InfoTag type="secondary" info={props.data.major}/>
             </Card.Body>
         </Card>
     );
