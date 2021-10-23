@@ -24,3 +24,34 @@ h3, h5 {
 .dislike:hover {
   cursor: pointer;
 }
+
+#frame {
+  overflow: hidden;
+  position: relative;
+  width: 400px;
+  height: 550px;
+  padding: 0;
+}
+
+#carousel {
+  position: relative;
+  padding: 0;
+  height: 550px;
+  display: flex;
+  flex-direction: row;
+}
+
+.animate{
+	-webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+}
+
+.ProfileCard {
+  transform: translate(-400px)
+}

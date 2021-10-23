@@ -6,7 +6,7 @@ import ThumbDownIcon from '@mui/icons-material/ThumbDown';
 
 function ProfileCard(props) {
     return (
-        <Card style={{ width: '20rem', height: '100%', margin: "10px"}}>
+        <Card className="ProfileCard" style={{ width: '400px', height: '100%'}}>
             <Card.Body style={{padding: '10px 15px'}}>
                 <div className="mb-3">
                     <h2 style={{fontSize: '60px'}}>{props.data.emoji}</h2>
