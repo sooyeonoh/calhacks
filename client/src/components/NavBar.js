@@ -12,6 +12,7 @@ function NavBar(props) {
                 <NavLink className="ps-4 navlink" to="/">Home</NavLink>
                 <NavLink className="ps-4 navlink" to="/">Matches</NavLink>
                 <NavLink className="ps-4 navlink" to="./ProfileCreator">Profile</NavLink>
+                <NavLink className="ps-4 navlink" to="./ProfilePage">Profile Page</NavLink>
             </div>
         </div>
     );
