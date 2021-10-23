@@ -6,9 +6,7 @@ function Dashboard(props) {
     return (
         <div>
             <NavBar/>
-            <div className="d-flex flex-wrap" style={{padding: "40px 80px"}}>
-                <ProfileCard/>
-                <ProfileCard/>
+            <div className="d-flex justify-content-center flex-wrap" style={{padding: "40px 80px"}}>
                 <ProfileCard/>
                 <ProfileCard/>
                 <ProfileCard/>
