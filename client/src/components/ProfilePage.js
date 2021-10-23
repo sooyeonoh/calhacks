@@ -20,61 +20,64 @@ function EditButton(props) {
 function EditState(props) {
     return (
         <Card border="light" style={{margin: "10px", padding: '10px 15px'}}>
-            <Card.Body>
-                <div className="mb-5">
-                <h1 style={{fontSize: '150px'}}>{"🧸"}</h1>
-                    <Card.Title style={{fontSize: '70px'}}>{"cal student"}</Card.Title>
-                    <Card.Text className="fw-bold" style={{fontSize: '25px'}}>{"computer science"}, {2023}</Card.Text>
-                    <Card.Text className="fst-italic" style={{fontSize: '20px'}}>"{"study and chill?"}"</Card.Text>
-                </div>
+                    <Card.Body>
+                    <div className="mb-5">
+                        <h1 style={{fontSize: '150px'}}>{"🧸"}</h1>
+                        <Card.Title style={{fontSize: '70px'}}>{"cal student"}</Card.Title>
+                        <Card.Text className="fw-bold" style={{fontSize: '25px'}}>{"computer science"}, {2023}</Card.Text>
+                        <Card.Text className="fst-italic" style={{fontSize: '20px'}}>"{"study and chill?"}"</Card.Text>
+                    </div>
 
-                <div className="d-flex flex-column align-items-start">
-                    <div className="d-flex flex-column align-items-start mb-4">
-                    
+                    <div>
+                    <div className="d-flex flex-column align-items-start">
                         <Card.Title style={{fontSize: '22 px'}}>Personality</Card.Title>
-                        <div>
-                        <FloatingLabel controlId="floatingSelect" label="MBTI">
-                            <Form.Select aria-label="MBTI">
-                                <option>...</option>
-                                <option value="1">ISTJ</option>
-                                <option value="2">ISTP</option>
-                                <option value="3">ISFJ</option>
-                                <option value="4">ISFP</option>
-                                <option value="5">INFJ</option>
-                                <option value="6">INFP</option>
-                                <option value="7">INTJ</option>
-                                <option value="8">INTP</option>
-                                <option value="9">ESTP</option>
-                                <option value="10">ESTJ</option>
-                                <option value="11">ESFP</option>
-                                <option value="12">ESFJ</option>
-                                <option value="13">ENFP</option>
-                                <option value="14">ENFJ</option>
-                                <option value="15">ENTP</option>
-                                <option value="16">ENTJ</option>
-                            </Form.Select>
-                            </FloatingLabel>
                         </div>
-                        <div>
-                        <FloatingLabel controlId="floatingSelect" label="Zodiac Sign">
-                            <Form.Select aria-label="Zodiac sign">
-                                <option>...</option>
-                                <option value="1">Aries</option>
-                                <option value="2">Taurus</option>
-                                <option value="3">Gemini</option>
-                                <option value="4">Cancer</option>
-                                <option value="5">Leo</option>
-                                <option value="6">Virgo</option>
-                                <option value="7">Libra</option>
-                                <option value="8">Scorpio</option>
-                                <option value="9">Sagittarius</option>
-                                <option value="10">Capricorn</option>
-                                <option value="11">Aquarius</option>
-                                <option value="12">Pisces</option>
-                            </Form.Select>
-                            </FloatingLabel>
-                        </div>
-                        <div>
+                        <div className="d-flex flex-column align-items-stretch mb-4">
+                            <div>
+                            <Row className="g-2">
+                            <Col md>
+                            <FloatingLabel controlId="floatingSelect" label="MBTI">
+                                <Form.Select aria-label="MBTI">
+                                    <option>...</option>
+                                    <option value="1">ISTJ</option>
+                                    <option value="2">ISTP</option>
+                                    <option value="3">ISFJ</option>
+                                    <option value="4">ISFP</option>
+                                    <option value="5">INFJ</option>
+                                    <option value="6">INFP</option>
+                                    <option value="7">INTJ</option>
+                                    <option value="8">INTP</option>
+                                    <option value="9">ESTP</option>
+                                    <option value="10">ESTJ</option>
+                                    <option value="11">ESFP</option>
+                                    <option value="12">ESFJ</option>
+                                    <option value="13">ENFP</option>
+                                    <option value="14">ENFJ</option>
+                                    <option value="15">ENTP</option>
+                                    <option value="16">ENTJ</option>
+                                    </Form.Select>
+                                </FloatingLabel>
+                            </Col>
+                        <Col md>
+                            <FloatingLabel controlId="floatingSelect" label="Zodiac Sign">
+                                <Form.Select aria-label="Zodiac sign">
+                                    <option>...</option>
+                                    <option value="1">Aries</option>
+                                    <option value="2">Taurus</option>
+                                    <option value="3">Gemini</option>
+                                    <option value="4">Cancer</option>
+                                    <option value="5">Leo</option>
+                                    <option value="6">Virgo</option>
+                                    <option value="7">Libra</option>
+                                    <option value="8">Scorpio</option>
+                                    <option value="9">Sagittarius</option>
+                                    <option value="10">Capricorn</option>
+                                    <option value="11">Aquarius</option>
+                                    <option value="12">Pisces</option>
+                                    </Form.Select>
+                                </FloatingLabel>
+                            </Col>
+                        <Col md>
                         <FloatingLabel controlId="floatingSelect" label="Hogwarts House">
                             <Form.Select aria-label="Hogwarts House">
                                 <option>...</option>
@@ -84,9 +87,11 @@ function EditState(props) {
                                 <option value="4">Hufflepuff</option>
                             </Form.Select>
                             </FloatingLabel>
-                        </div>
+                        </Col>
+                    </Row>
                     </div>
-
+                </div>
+            
                     <div className="d-flex flex-column align-items-start mb-4">
                         <Card.Title style={{fontSize: '22 px'}}>Interests</Card.Title>
                         <div>
@@ -96,8 +101,8 @@ function EditState(props) {
                     </div>
                 </div>
 
-                </Card.Body>
-            </Card>
+            </Card.Body>
+        </Card>
     )
 }
 
