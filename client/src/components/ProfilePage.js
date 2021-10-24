@@ -93,13 +93,100 @@ function EditState(props) {
             
                     <div className="d-flex flex-column align-items-start mb-4">
                         <Card.Title style={{fontSize: '22 px'}}>Interests</Card.Title>
-                        <div>
-                            <InfoTag type="secondary" info={"R&B"}/>
-                            <InfoTag type="secondary" info={"Muracci's"}/>
                         </div>
+                        <div className="d-flex flex-column align-items-stretch mb-4">
+                            <div>
+                            <Row className="g-2">
+                            <Col md>
+                            <FloatingLabel controlId="floatingSelect" label="Favorite Music Genre">
+                                <Form.Select aria-label="music">
+                                    <option>...</option>
+                                    <option value="1">Pop</option>
+                                    <option value="2">Alternative Rock</option>
+                                    <option value="3">Hip-Hop/Rap</option>
+                                    <option value="4">Indie</option>
+                                    <option value="5">R&B/Soul</option>
+                                    <option value="6">EDM</option>
+                                    <option value="7">Classical</option>
+                                    <option value="8">KPop</option>
+                                    <option value="9">Reggaeton/Latin</option>
+                                    <option value="10">Country</option>
+                                    <option value="11">Cultural</option>
+                                    <option value="12">Jazz/Blues</option>
+                                    </Form.Select>
+                                </FloatingLabel>
+                            </Col>
+                        <Col md>
+                            <FloatingLabel controlId="floatingSelect" label="Favorite Spot on Durant">
+                                <Form.Select aria-label="Berkeley Restaurant">
+                                    <option>...</option>
+                                    <option value="1">D'Yar</option>
+                                    <option value="2">IB's</option>
+                                    <option value="3">La Burrita (Southside)</option>
+                                    <option value="4">Thai Basil</option>
+                                    <option value="5">Gypsy's</option>
+                                    <option value="6">Kimchi Garden</option>
+                                    <option value="7">Super Duper</option>
+                                    <option value="8">Top Dog</option>
+                                    <option value="9">Taco Bell</option>
+                                    <option value="10">Tacos Sinaloa</option>
+                                    <option value="11">Koja Kitchen</option>
+                                    <option value="12">Bunz</option>
+                                    </Form.Select>
+                                </FloatingLabel>
+                            </Col>
+                    </Row>
                     </div>
                 </div>
 
+                <div className="d-flex flex-column align-items-start mb-4">
+                        <Card.Title style={{fontSize: '22px'}}>Relationships</Card.Title>
+                        <div>
+                           <div className="d-flex flex-column align-items-stretch mb-4">
+                            <div>
+                            <Row className="g-2">
+                            <Col md>
+                            <FloatingLabel controlId="floatingSelect" label="What I'm Looking For">
+                                <Form.Select aria-label="looking_for">
+                                    <option>...</option>
+                                    <option value="1">Friends</option>
+                                    <option value="2">Study Buddy</option>
+                                    <option value="3">Something Casual</option>
+                                    <option value="4">Hookups</option>
+                                    <option value="5">See Where it Goes</option>
+                                    <option value="6">Dates</option>
+                                    <option value="7">Relationship</option>
+                                    <option value="8">Unsure</option>
+                                    </Form.Select>
+                                </FloatingLabel>
+                            </Col>
+                        <Col md>
+                            <FloatingLabel controlId="floatingSelect" label="My Ideal Date...">
+                                <Form.Select aria-label="Berkeley Restaurant">
+                                    <option>...</option>
+                                    <option value="1">Picnic on the Glade</option>
+                                    <option value="2">Netflix and Chill</option>
+                                    <option value="3">Walks on the beach</option>
+                                    <option value="4">Candlelit Dinner</option>
+                                    <option value="5">Performance Art</option>
+                                    <option value="6">Painting at the Park</option>
+                                    <option value="7">Movie Night</option>
+                                    <option value="8">Kareoke at Jaguar</option>
+                                    <option value="9">Sushi and Sunset</option>
+                                    <option value="10">Going to Concert</option>
+                                    <option value="11">Skateboard Sesh</option>
+                                    <option value="12">Art Museum Visit</option>
+                                    <option value="13">Book Store Browsing</option>
+                                    <option value="14">SF Adventure</option>
+                                    </Form.Select>
+                                </FloatingLabel>
+                            </Col>
+                        </Row>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
             </Card.Body>
         </Card>
     )
@@ -115,7 +202,8 @@ function DoneEditButton(props) {
 
 function NormalState(props) {
     return (
-        <Card border="light" style={{margin: "10px", padding: '10px 15px'}}>
+    <Card className="NormalState">
+        <Card border="light" style={{margin: "10px", padding: '10px 60px'}}>
             <Card.Body>
                 <div className="mb-5">
                 <h1 style={{fontSize: '150px'}}>{"🧸"}</h1>
@@ -127,25 +215,34 @@ function NormalState(props) {
                 <div className="d-flex flex-column align-items-start">
                     <div className="d-flex flex-column align-items-start mb-4">
                     
-                        <Card.Title style={{fontSize: '22 px'}}>Personality</Card.Title>
+                        <Card.Title style={{fontSize: '35 px'}}>Personality</Card.Title>
                         <div>
-                            <InfoTag type="primary" info={"INTP"}/>
+                            <h3><InfoTag type="primary" info={"INTP"}/>
                             <InfoTag type="dark" info={"Sagittarius"}/>
-                            <InfoTag type="warning" info={"Ravenclaw"}/>
+                            <InfoTag type="warning" info={"Ravenclaw"}/></h3>
                         </div>
                     </div>
 
                     <div className="d-flex flex-column align-items-start mb-4">
                         <Card.Title style={{fontSize: '22 px'}}>Interests</Card.Title>
                         <div>
-                            <InfoTag type="secondary" info={"R&B"}/>
-                            <InfoTag type="secondary" info={"Muracci's"}/>
+                            <h3><InfoTag type="secondary" info={"R&B"}/>
+                            <InfoTag type="secondary" info={"Muracci's"}/></h3>
+                        </div>
+                    </div>
+
+                    <div className="d-flex flex-column align-items-start mb-4">
+                        <Card.Title style={{fontSize: '22px'}}>Relationships</Card.Title>
+                        <div>
+                            <h3><InfoTag type="danger" info={"See Where it Goes"} style={{fontSize: '22px'}} />
+                            <InfoTag type="dark" info={"Dinner + Sunset"} style={{fontSize: '22px'}} /></h3>
                         </div>
                     </div>
                 </div>
 
                 </Card.Body>
             </Card>
+        </Card>
     )
 }
 

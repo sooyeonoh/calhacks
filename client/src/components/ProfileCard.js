@@ -12,12 +12,12 @@ function ProfileCard(props) {
                     <h2 style={{fontSize: '60px'}}>{props.data.emoji}</h2>
                     <Card.Title style={{fontSize: '28px'}}>{props.name}</Card.Title>
                     <Card.Text className="fw-bold">{props.data.major}, {props.data.year}</Card.Text>
-                    <Card.Text className="fst-italic" style={{fontSize: '20px'}}>"{props.data.bio}"</Card.Text>
+                    <Card.Text className="fst-italic" style={{fontSize: '18px'}}>"{props.data.bio}"</Card.Text>
                 </div>
 
                 <div className="d-flex flex-column align-items-start">
                     <div className="d-flex flex-column align-items-start mb-3">
-                        <Card.Title style={{fontSize: '18px'}}>Personality</Card.Title>
+                        <Card.Title style={{fontSize: '14px'}}>Personality</Card.Title>
                         <div>
                             <InfoTag type="primary" info={props.interests.mbti}/>
                             <InfoTag type="dark" info={props.interests.astrology}/>
@@ -26,10 +26,18 @@ function ProfileCard(props) {
                     </div>
 
                     <div className="d-flex flex-column align-items-start mb-4">
-                        <Card.Title style={{fontSize: '18px'}}>Interests</Card.Title>
+                        <Card.Title style={{fontSize: '14px'}}>Interests</Card.Title>
                         <div>
                             <InfoTag type="secondary" info={props.interests.music}/>
                             <InfoTag type="secondary" info={props.interests.berkeley_restaurant}/>
+                        </div>
+                    </div>
+
+                    <div className="d-flex flex-column align-items-start mb-4">
+                        <Card.Title style={{fontSize: '14px'}}>Relationships</Card.Title>
+                        <div>
+                            <InfoTag type="danger" info={props.preferences.looking_for}/>
+                            <InfoTag type="dark" info={props.preferences.ideal_date}/>
                         </div>
                     </div>
 

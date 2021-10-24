@@ -20,7 +20,8 @@ const profiles = [
 
       "preferences": {
         "looking_for": "Something casual",
-        "interested_in": "Everyone"
+        "interested_in": "Everyone",
+        "ideal_date": "Netflix and Chill"
       }
   },
 
@@ -45,7 +46,8 @@ const profiles = [
 
       "preferences": {
         "looking_for": "Hookups",
-        "interested_in": "Men"
+        "interested_in": "Men",
+        "ideal_date": "Picnic on the Glade"
       }
   },
 
@@ -70,7 +72,8 @@ const profiles = [
 
       "preferences": {
         "looking_for": "Study buddy",
-        "interested_in": "Women"
+        "interested_in": "Women",
+        "ideal_date": "Walks on the beach"
       }
   },
 
@@ -95,7 +98,8 @@ const profiles = [
 
     "preferences": {
       "looking_for": "Friends",
-      "interested_in": "Everyone"
+      "interested_in": "Everyone",
+      "ideal_date": "Candlelit Dinner"
     }
 },
 
@@ -120,7 +124,8 @@ const profiles = [
 
     "preferences": {
       "looking_for": "Relationship",
-      "interested_in": "Women"
+      "interested_in": "Women",
+      "ideal_date": "Performance Art"
     }
 }
 ]
