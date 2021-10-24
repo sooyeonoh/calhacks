@@ -23,8 +23,29 @@ function EditState(props) {
                     <div className="mb-5">
                         <h1 style={{fontSize: '150px'}}>{"🧸"}</h1>
                         <Card.Title style={{fontSize: '70px'}}>{"cal student"}</Card.Title>
-                        <Card.Text className="fw-bold" style={{fontSize: '25px'}}>{"computer science"}, {2023}</Card.Text>
-                        <Card.Text className="fst-italic" style={{fontSize: '20px'}}>"{"study and chill?"}"</Card.Text>
+                        <Row className="g-2">
+                            <Col md>
+                                <FloatingLabel controlId="floatingInputGrid" label="Major">
+                                <Form.Control type="text" placeholder="Major" />
+                                </FloatingLabel>
+                            </Col>
+                            <Col md>
+                            <FloatingLabel controlId="floatingSelectGrid" label="Year">
+                                <Form.Select aria-label="Year">
+                                    <option>...</option>
+                                    <option value="1">2022</option>
+                                    <option value="2">2023</option>
+                                    <option value="3">2024</option>
+                                    <option value="4">2025</option>
+                                </Form.Select>
+                        </FloatingLabel>
+                    </Col>
+                    </Row>
+                        <div>
+                            <FloatingLabel controlId="floatingInputGrid" label="Bio">
+                            <Form.Control type="text" placeholder="Tell us about yourself!" />
+                            </FloatingLabel>
+                        </div>
                     </div>
 
                     <div>
