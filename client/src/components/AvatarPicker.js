@@ -11,9 +11,9 @@ function AvatarPicker(props) {
     return (
         <div>
             {chosenEmoji ? (
-                <span>{chosenEmoji.emoji}</span>
+                <h4 style={{fontSize: '30px'}}>{chosenEmoji.emoji}</h4>
             ) : (
-                <span>Choose Emoji</span>
+                <h4 style={{fontSize: '20px'}}>{"Choose an Emoji"}</h4>
             )}
             <Picker onEmojiClick={onEmojiClick}/>
         </div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import NavBar from './NavBar';
-import AvatarPicker from './AvatarPicker';
 
+import Picker from 'emoji-picker-react';
 import "react-datepicker/dist/react-datepicker.css";
 import { Button } from 'react-bootstrap';
 
@@ -13,6 +13,7 @@ class ProfileCreator extends React.Component {
         this.handleAvatarSelected = this.handleAvatarSelected.bind(this);
         this.state = {
             selectAvatar: false,
+            chosenEmoji: "🐻"
         };
     }
 
@@ -21,17 +22,21 @@ class ProfileCreator extends React.Component {
     }
 
     handleAvatarSelected() {
-        this.setState({ selectAvatar: false })
+        this.setState({ 
+            selectAvatar: false,
+            chosenEmoji: "🧘🏻‍♂️"
+         })
     }
         
     render() {
         const selectAvatar = this.state.selectAvatar;
         let avatarSelector;
+        let avatarPicker = <AvatarPicker />;
         if (selectAvatar) {
             avatarSelector = (
                 <div className="d-flex flex-column bd-highlight mb-3 mx-auto">
                     <div className="p-2">
-                        <AvatarPicker />
+                        {avatarPicker}
                     </div>
                     <div className="p-2">
                         <Button variant="outline-primary" onClick={this.handleAvatarSelected}>Select</Button>
@@ -40,8 +45,11 @@ class ProfileCreator extends React.Component {
             );
         } else {
             avatarSelector = (
-                <div className="d-flex flex-row bd-highlight mb-3 mx-auto">
-                    <Button variant="outline-primary" onClick={this.handleSelectAvatar}>Select Avatar</Button>
+                <div className="d-flex flex-column bd-highlight mb-3 mx-auto">
+                    <h4 style={{fontSize: '30px'}}>{this.state.chosenEmoji}</h4>
+                    <div className="p-2">
+                        <Button variant="outline-primary" onClick={this.handleSelectAvatar}>Select Avatar</Button>
+                    </div>
                 </div>
             );
         }
@@ -92,5 +100,24 @@ class ProfileCreator extends React.Component {
         );
     }
 }
+
+function AvatarPicker(props) {
+    const [chosenEmoji, setChosenEmoji] = useState(null);
+
+    const onEmojiClick = (event, emojiObject) => {
+        setChosenEmoji(emojiObject);
+    };
+
+    return (
+        <div>
+            {chosenEmoji ? (
+                <h4 style={{fontSize: '30px'}}>{chosenEmoji.emoji}</h4>
+            ) : (
+                <h4 style={{fontSize: '20px'}}>{"Choose an Emoji"}</h4>
+            )}
+            <Picker onEmojiClick={onEmojiClick}/>
+        </div>
+    );
+};
 
 export default ProfileCreator;
