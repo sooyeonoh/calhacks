@@ -13,7 +13,6 @@ class ProfileCreator extends React.Component {
         this.handleAvatarSelected = this.handleAvatarSelected.bind(this);
         this.state = {
             selectAvatar: false,
-            avatar: null,
         };
     }
 
@@ -35,14 +34,14 @@ class ProfileCreator extends React.Component {
                         <AvatarPicker />
                     </div>
                     <div className="p-2">
-                        <Button variant="primary" onClick={this.handleAvatarSelected}>Select</Button>
+                        <Button variant="outline-primary" onClick={this.handleAvatarSelected}>Select</Button>
                     </div>
                 </div>
             );
         } else {
             avatarSelector = (
                 <div className="d-flex flex-row bd-highlight mb-3 mx-auto">
-                    <Button variant="primary" onClick={this.handleSelectAvatar}>Select Avatar</Button>
+                    <Button variant="outline-primary" onClick={this.handleSelectAvatar}>Select Avatar</Button>
                 </div>
             );
         }
@@ -50,7 +49,9 @@ class ProfileCreator extends React.Component {
             <div>
                 <NavBar/>
                 <div className="d-flex flex-column justify-content-center" style={{ padding: '30px 40px'}}>
-                    {avatarSelector}
+                    <div className="d-flex flex-row bd-highlight mb-3 mx-auto align-items-center">
+                        <h3 >Sign Up</h3>
+                    </div>
                     <div className="d-flex flex-row bd-highlight mb-3 mx-auto">
                         <div class="input-group first-name" className="p-2">
                             <input type="text" class="form-control" placeholder="First Name" aria-label="First Name"/>
@@ -59,6 +60,7 @@ class ProfileCreator extends React.Component {
                             <input type="text" class="form-control" placeholder="Last Name" aria-label="Last Name" />
                         </div>
                     </div>
+                    {avatarSelector}
                     <div className="d-flex flex-row bd-highlight mb-3 mx-auto">
                         <div class="dropdown" className="p-2">
                             <select class="form-select" aria-label="Disabled select example">
@@ -83,7 +85,7 @@ class ProfileCreator extends React.Component {
                         </div>
                     </div>
                     <div className="d-flex flex-row bd-highlight mb-3 mx-auto">
-                        <Button variant="primary">Create Account</Button>
+                        <Button variant="outline-primary">Create Account</Button>
                     </div>
                 </div>
             </div>

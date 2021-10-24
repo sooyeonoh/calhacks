@@ -13,9 +13,9 @@ function AvatarPicker(props) {
             {chosenEmoji ? (
                 <span>{chosenEmoji.emoji}</span>
             ) : (
-                <span>No emoji Chosen</span>
+                <span>Choose Emoji</span>
             )}
-            <Picker onEmojiClick={onEmojiClick} />
+            <Picker onEmojiClick={onEmojiClick}/>
         </div>
     );
 };
